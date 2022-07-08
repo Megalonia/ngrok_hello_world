@@ -5,6 +5,7 @@ import requests
 
 load_dotenv()
 api_key: str = os.environ["authtoken"]
+domain: str = os.environ['domain']
 
 tunnels: str         = 'https://api.ngrok.com/tunnels'
 https_edge: str      = 'https://api.ngrok.com/edges/https'
@@ -18,7 +19,7 @@ header : Dict[str,str] = {
 }
 
 reserved_domain_obj : Dict[str,str] = {
-    "name"  : os.environ['domain'],
+    "name"  : domain,
     "region": "us",
 }
 
@@ -29,7 +30,7 @@ https_response_obj: dict = {
 }
 
 https_edge_obj : Dict[str,str] = {
-    "hostports": os.environ['domain'] + ":443",
+    "hostports":  domain + ":443",
 }
 
 """data : Dict[str,str] = {
