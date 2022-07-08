@@ -4,9 +4,11 @@ import os
 import requests
 
 load_dotenv()
+# env vars 
 api_key: str = os.environ["authtoken"]
 domain: str = os.environ['domain']
 
+#urls
 tunnels: str         = 'https://api.ngrok.com/tunnels'
 https_edge: str      = 'https://api.ngrok.com/edges/https'
 reserved_domain: str = 'https://api.ngrok.com/reserved_domains'
@@ -18,6 +20,8 @@ header : Dict[str,str] = {
     "Ngrok-Version" : "2"
 }
 
+
+# objs 
 reserved_domain_obj : Dict[str,str] = {
     "name"  : domain,
     "region": "us",
