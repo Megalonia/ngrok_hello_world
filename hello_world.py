@@ -20,7 +20,6 @@ header : Dict[str,str] = {
 reserved_domain_obj : Dict[str,str] = {
     "name"  : os.environ['domain'],
     "region": "us",
-
 }
 
 https_response_obj: dict = {
