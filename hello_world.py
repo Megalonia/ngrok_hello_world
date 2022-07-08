@@ -8,7 +8,7 @@ load_dotenv()
 api_key: str = os.environ["authtoken"]
 domain: str = os.environ['domain']
 
-#urls
+# urls
 tunnels: str         = 'https://api.ngrok.com/tunnels'
 https_edge: str      = 'https://api.ngrok.com/edges/https'
 reserved_domain: str = 'https://api.ngrok.com/reserved_domains'
